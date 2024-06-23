@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "outage-reminder"
+version = "0.1.0"
+description = ""
+authors = ["15bubbles <15bubbles.15bubbles@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = "^0.27.0"
+click = "^8.1.7"
+rich = "^13.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
