@@ -1,6 +1,5 @@
 from typing import Any, TypedDict
 
-
 # TODO: perhaps some dataclasses or pydantic dataclasses/models would be better than
 # typed dicts
 OutageItem = TypedDict(

@@ -1,13 +1,12 @@
-import sys
 import datetime
+import sys
 
 import click
-
 from rich import print
 
-from outage_reminder.client import get_outages, find_city, find_street
-from outage_reminder.parser import filter_outages
+from outage_reminder.client import find_city, find_street, get_outages
 from outage_reminder.datetime_utils import utcnow
+from outage_reminder.parser import filter_outages
 
 
 # TODO: parameters for start date and end date

@@ -2,8 +2,8 @@ import datetime
 
 import httpx
 
-from outage_reminder.datetime_utils import utcnow, timestamp, isoformat_datetime
-from outage_reminder.types import OutageItem, OutageResponse, CitiesItem, StreetsItem
+from outage_reminder.datetime_utils import isoformat_datetime, timestamp, utcnow
+from outage_reminder.types import CitiesItem, OutageItem, OutageResponse, StreetsItem
 
 OUTAGES_API_URL = "https://www.tauron-dystrybucja.pl/waapi/outages"
 GEO_API_URL = "https://www.tauron-dystrybucja.pl/waapi/enum/geo"
