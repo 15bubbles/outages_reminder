@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import Any, TypedDict
 
 # TODO: perhaps some dataclasses or pydantic dataclasses/models would be better than
@@ -58,3 +59,8 @@ StreetsItem = TypedDict(
         "Name": str,
     },
 )
+
+
+class OutageType(Enum):
+    PLANNED = 1
+    FAILURE = 2
