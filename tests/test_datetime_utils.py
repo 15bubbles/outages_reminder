@@ -1,8 +1,9 @@
 import datetime
 
 import pytest
+from freezegun import freeze_time
 
-from outage_reminder.datetime_utils import isoformat_datetime, timestamp
+from outage_reminder.datetime_utils import isoformat_datetime, timestamp, utcnow
 
 
 @pytest.mark.parametrize(
@@ -30,5 +31,10 @@ def test_timestamp() -> None:
     assert actual == expected
 
 
-# TODO: write test for utcnow function, but it will probably require
-#  some library like `freezegun`
+@freeze_time("2024-06-22 08:00:00")
+def test_utcnow() -> None:
+    expected = datetime.datetime(2024, 6, 22, 8, 0, 0, 0, datetime.timezone.utc)
+
+    actual = utcnow()
+
+    assert actual == expected
