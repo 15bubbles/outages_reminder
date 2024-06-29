@@ -1,6 +1,6 @@
 import datetime
-import sys
 import json
+import sys
 
 import click
 from rich import print
@@ -9,7 +9,6 @@ from outage_reminder.client import find_city, find_street, get_outages
 from outage_reminder.datetime_utils import utcnow
 from outage_reminder.parser import filter_outages
 from outage_reminder.types import OutageItem, OutageType
-
 
 # TODO: better logging with INFO/ERROR/etc prefixes added by default
 #  also check if there is a way to automatically turn on verbosity to
